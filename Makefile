@@ -2,25 +2,29 @@ NAME = libft.a
 
 CC = gcc
 
-SRCS =	src/ft_memmove.c\
-		src/ft_toupper.c\
-		src/ft_tolower.c\
-		src/ft_strlcat.c\
-		src/ft_strlcpy.c\
-		src/ft_memcpy.c\
-		src/ft_bzero.c\
-		src/ft_memset.c\
-		src/ft_strlen.c\
-		src/ft_isprint.c\
-		src/ft_memchr.c\
-		src/ft_strchr.c\
-		src/ft_strrchr.c\
-		src/ft_strnstr.c\
-		src/ft_strncmp.c\
-		src/ft_isascii.c\
-		src/ft_isalnum.c\
-		src/ft_isdigit.c\
-		src/ft_isalpha.c
+SRCS =	ft_memmove.c\
+		ft_toupper.c\
+		ft_tolower.c\
+		ft_strlcat.c\
+		ft_strlcpy.c\
+		ft_memcpy.c\
+		ft_bzero.c\
+		ft_memset.c\
+		ft_strlen.c\
+		ft_isprint.c\
+		ft_memchr.c\
+		ft_strchr.c\
+		ft_strrchr.c\
+		ft_strnstr.c\
+		ft_strncmp.c\
+		ft_memcmp.c\
+		ft_calloc.c\
+		ft_strdup.c\
+		ft_atoi.c\
+		ft_isascii.c\
+		ft_isalnum.c\
+		ft_isdigit.c\
+		ft_isalpha.c
 
 	   
 
@@ -36,6 +40,9 @@ $(NAME): $(OBJS)
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $@ -I.
 
+so:
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 clean:
 	rm -f $(OBJS)

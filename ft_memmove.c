@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 14:27:37 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/31 15:05:53 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/10/30 15:07:24 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/10/31 21:24:53 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{	
 	unsigned int	i;
+	char			*ptr_dest;
+	char			*ptr_src;
 
-	i = 0;
-	if (!n)
-		return (0);
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
+	ptr_dest = (char *)dest;
+	ptr_src = (char *)src;
+	if (dest > src && n)
 	{
-		i++;
+		i = n;
+		while (i > 0)
+		{
+			ptr_dest[i - 1] = ptr_src[i - 1];
+			i--;
+		}
 	}
-	return (s1[i] - s2[i]);
+	else
+	{
+		i = 0;
+		while (i < n)
+		{
+			ptr_dest[i] = ptr_src[i];
+			i++;
+		}
+	}
+	return ((char *)dest);
 }

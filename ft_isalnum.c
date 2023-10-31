@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marde-vr <marde-vr@student.42angoulem      +#+  +:+       +#+        */
+/*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 17:09:10 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/30 23:25:28 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/10/31 22:36:30 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/10/31 22:36:43 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	return (c >= 32 && c != 127);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

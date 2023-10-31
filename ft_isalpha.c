@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marde-vr <marde-vr@student.42angoulem      +#+  +:+       +#+        */
+/*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 13:27:06 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/09/19 13:30:02 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/10/31 22:35:57 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/10/31 22:36:03 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(char c)
+int	ft_isalpha(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

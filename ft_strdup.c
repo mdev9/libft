@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 15:07:24 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/31 09:27:34 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/10/31 16:51:48 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/10/31 16:54:05 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/*void	*ft_memmove(void *dest, const void *src, size_t n)
-{	
-	unsigned int i;
-
-	if (dest > src && n)
-	{
-		i = n;
-		while (i < n - 1)
-			dest[i] = src[i];
-			i--;
-	}
-	else
-	{
-		i = 0;
-		while (i < n)
-	}
-	return ((char *)dest);
-}
-
-int	main(void)
+char	*ft_strdup(const char *src)
 {
-	char *str = "yesno";
-	
+	int		i;
+	char	*copy;	
+
+	i = 0;
+	copy = NULL;
+	while (src[i])
+		i++;
+	copy = malloc((i + 1) * sizeof(char));
+	if (copy == NULL)
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		copy[i] = src[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
 }
-*/
+
