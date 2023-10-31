@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:49:26 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/30 21:45:04 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/10/31 00:18:00 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 	char	*ptr;
-	//size_t len;
 
 	i = 0;
-	//len = ft_strlen(s);
 	ptr = (char *)s;
 	while (i < n)
 	{
@@ -28,4 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (ptr);
 }
-

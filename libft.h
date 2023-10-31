@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 21:17:32 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/30 23:06:40 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:37:41 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	*ft_memchr(const void *s, int c, size_t n);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif

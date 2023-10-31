@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marde-vr <marde-vr@student.42angoulem      +#+  +:+       +#+        */
+/*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 08:54:15 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/09/21 09:19:45 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/10/31 00:09:28 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/10/31 00:27:14 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	ptr_src = (char *)src;
 	while (i < n)
 	{
-		ptr_src[i] = ptr_dest[i];
+		ptr_dest[i] = ptr_src[i];
 		i++;
 	}
 	return (ptr_dest);
