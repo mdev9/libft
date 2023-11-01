@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 02:47:56 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/01 03:01:16 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/11/01 23:48:59 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (k);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char *src = (char *)"AAAAA";
-	char dest[30]; ft_memset(dest, 0, 30);
-	ft_strlcat(dest, src, 0);
-	dest[0] = 'B';
-	printf("%s", dest);
-	printf("%zu", ft_strlcat(dest, src, 0));
-}*/

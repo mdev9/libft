@@ -3,6 +3,8 @@ NAME = libft.a
 CC = clang
 
 SRCS =	ft_substr.c\
+		ft_strjoin.c\
+		ft_strtrim.c\
 		ft_memmove.c\
 		ft_toupper.c\
 		ft_tolower.c\
