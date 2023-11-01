@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 00:09:28 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/31 00:27:14 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/11/01 01:50:43 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	ptr_dest = (char *)dest;
 	ptr_src = (char *)src;
-	while (i < n)
+	while (i < n && ptr_dest && ptr_src)
 	{
 		ptr_dest[i] = ptr_src[i];
 		i++;

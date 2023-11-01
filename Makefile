@@ -1,8 +1,9 @@
 NAME = libft.a
 
-CC = gcc
+CC = clang
 
-SRCS =	ft_memmove.c\
+SRCS =	ft_substr.c\
+		ft_memmove.c\
 		ft_toupper.c\
 		ft_tolower.c\
 		ft_strlcat.c\

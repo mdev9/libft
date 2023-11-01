@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:31:40 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:15:13 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/10/31 23:01:49 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -36,4 +36,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (count * sign);
 }
-

@@ -1,41 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:39:21 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/01 01:28:30 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/11/01 11:09:31 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/11/01 13:59:44 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char			*substr;
 	unsigned int	i;
-	unsigned char	*ptr_s1;
-	unsigned char	*ptr_s2;
 
+	//if (!s || ft_strlen(s) < start)
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < start)
+		len = 1;
+	substr = malloc(sizeof(char) * len);
+	if (!substr)
+		return (NULL);
 	i = 0;
-	ptr_s1 = (unsigned char *)s1;
-	ptr_s2 = (unsigned char *)s2;
-	if (!n)
-		return (0);
-	while (ptr_s1[i] == ptr_s2[i] && i < n - 1)
+	while (i < len && substr[i] != '\0')
 	{
+		substr[i] = s[i + start];
 		i++;
 	}
-	return ((unsigned char)ptr_s1[i] - (unsigned char)ptr_s2[i]);
+	substr[i] = '\0';
+	return (substr);
 }
+
 
 /*
 #include <stdio.h>
+#include <string.h>
 int	main(void)
 {
-	char s2[] = {0, 0, 127, 0};
-	char s3[] = {0, 0, 42, 0};
-	printf("%d", ft_memcmp(s2, s3, 4));
-
+	char * s = ft_substr("tripouille", 0, 42000);
+	printf("%d", strcmp(s, "tripouille"));
 }
+
+
 */

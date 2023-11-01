@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:51:48 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:54:05 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/10/31 23:02:22 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -32,4 +32,3 @@ char	*ft_strdup(const char *src)
 	copy[i] = '\0';
 	return (copy);
 }
-
