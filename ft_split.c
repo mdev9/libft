@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 16:15:28 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/02 23:26:59 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/11/02 14:15:12 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/11/02 14:27:00 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-
-char *ft_strtrim(char const *s1, char const *set)
+/*char	**ft_split(char const *s, char c)
 {
-	char *trimstr;
-	int	set_size;
-
-	set_size = ft_strlen(set);
+	char **str_array;
 	
 
 }
+*/

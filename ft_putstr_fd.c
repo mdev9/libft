@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 16:15:28 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/02 23:26:59 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/11/02 15:48:00 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/11/02 16:00:36 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-
-char *ft_strtrim(char const *s1, char const *set)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char *trimstr;
-	int	set_size;
+	int	i;
 
-	set_size = ft_strlen(set);
-	
-
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+		write(fd, &s[i++], 1);
 }

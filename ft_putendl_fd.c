@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 16:15:28 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/02 23:26:59 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/11/02 15:48:44 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/11/02 16:03:01 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-
-char *ft_strtrim(char const *s1, char const *set)
+void ft_putendl_fd(char *s, int fd)
 {
-	char *trimstr;
-	int	set_size;
-
-	set_size = ft_strlen(set);
-	
-
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
