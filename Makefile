@@ -72,7 +72,7 @@ so:
 	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
