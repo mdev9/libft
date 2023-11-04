@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:09:31 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/01 14:52:57 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/11/03 14:27:38 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -21,15 +21,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (ft_strlen(s) < start)
 		len = 0;
-	if (ft_strlen(s) < len)
-		total_len = ft_strlen(s) - start;
+	if (ft_strlen(s) <= len)
+		total_len = ft_strlen(s) - start + 1;
 	else
 		total_len = len + 1;
 	substr = malloc(total_len);
 	if (!substr)
 		return (NULL);
 	i = 0;
-	while (i < len && s[i + start] != '\0')
+	while (i < len && s[i + start])
 	{
 		substr[i] = s[i + start];
 		i++;
@@ -37,14 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char* s = ft_substr("tripouille", 2, 2);
-	printf("%s", s);
-}
-*/

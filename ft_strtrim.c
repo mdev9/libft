@@ -5,66 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 21:24:59 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/01 23:30:06 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/11/02 16:15:28 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/11/03 12:39:26 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	ft_chrcount(char const *s1, char const *set)
+int	ft_isinset(char const c, char const *set)
 {
-	int				count;
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
 
 	i = 0;
-	count = 0;
-	while (i < ft_strlen(set))
+	while (set[i])
 	{
-		j = 0;
-		while (j < ft_strlen(s1))
-		{
-			if (s1[i] == set[j])
-				count++;
-			j++;
-		}
+		if (set[i] == c)
+			return (1);
 		i++;
 	}
-	return (count);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char			*str;
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
+	char	*trimstr;
+	int		start;
+	int		end;
 
-	str = malloc(ft_strlen(s1) - ft_chrcount(s1, set) + 1);
-	if (!str)
+	start = 0;
+	if (!s1)
 		return (NULL);
-	i = 0;
-	k = 0;
-	while (i < ft_strlen(s1))
-	{
-		j = 0;
-		while (j < ft_strlen(set))
-		{
-			if (s1[i] != set[j])
-			{
-				str[k] = s1[i];
-				k++;
-			}
-			j++;
-		}
-		i++;
-	}
-	str[k] = 0;
-	return (str);
-}
-#include <stdio.h>
-int main(void)
-{
-	printf("%s",ft_strtrim("a a   aaaaatestaa    aaa","a "));
-	return (0);
+	while (s1[start] && ft_isinset(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > 0 && ft_isinset(s1[end - 1], set))
+		end--;
+	if (start > end)
+		trimstr = malloc(1);
+	else
+		trimstr = malloc(end - start + 1);
+	if (!trimstr)
+		return (NULL);
+	ft_strlcpy(trimstr, s1 + start, end - start + 1);
+	return (trimstr);
 }
