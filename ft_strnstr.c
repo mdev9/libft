@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:07:02 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/01 02:39:27 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/11/03 20:44:32 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (little && *little == 0)
 		return (ptr);
 	while (i <= len && little && big && big[i])
-	{	
+	{
 		if (big[i] == little[0])
 		{
 			k = i;
