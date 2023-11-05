@@ -63,7 +63,7 @@ static char	*ft_strndup(const char *src, size_t n)
 	return (copy);
 }
 
-static void ft_free_array(char **str_array, int n)
+static void	ft_free_array(char **str_array, int n)
 {
 	int	i;
 
