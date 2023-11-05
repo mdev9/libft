@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marde-vr <marde-vr@student.42angoulem      +#+  +:+       +#+        */
+/*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 17:16:10 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/09/19 17:29:49 by marde-vr         ###   ########.fr       */
+/*   Created: 2023/11/05 01:47:15 by marde-vr          #+#    #+#             */
+/*   Updated: 2023/11/05 01:47:36 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
