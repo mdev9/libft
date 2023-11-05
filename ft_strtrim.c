@@ -6,12 +6,12 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:15:28 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/03 12:39:26 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/11/05 01:50:49 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isinset(char const c, char const *set)
+static int	ft_isinset(char const c, char const *set)
 {
 	int	i;
 
