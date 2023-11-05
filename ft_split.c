@@ -6,7 +6,7 @@
 /*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:15:12 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/05 02:06:51 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/11/05 02:22:00 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -63,7 +63,7 @@ static char	*ft_strndup(const char *src, size_t n)
 	return (copy);
 }
 
-static void ft_free_array(char **str_array, int n)
+static void	ft_free_array(char **str_array, int n)
 {
 	int	i;
 
