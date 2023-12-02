@@ -55,17 +55,20 @@ FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJS) 
+$(NAME): ft_printf get_next_line $(OBJS) 
 	ar rcs ${NAME} ${OBJS}
 
-bonus: $(OBJS) $(OBJS_BONUS) 
+bonus: ft_printf get_next_line $(OBJS) $(OBJS_BONUS) 
 	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 
+ft_printf:
+	make -C ./ft_printf
+
+get_next_line:
+	make -C ./get_next_line
 
 .c.o:
-	$(CC) $(FLAGS) -c $< -o $@ -I.
-
-	
+	$(CC) $(FLAGS) -c $< -o $@ -I . -I ./ft_printf -I ./get_next_line
 
 so:
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
@@ -73,9 +76,13 @@ so:
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
+	make -C get_next_line clean
+	make -C ft_printf clean
 
 fclean: clean
 	rm -f $(NAME)
+	make -C get_next_line fclean
+	make -C ft_printf fclean
 
 re: fclean all
 
