@@ -35,7 +35,9 @@ SRCS =	ft_substr.c\
 		ft_isascii.c\
 		ft_isalnum.c\
 		ft_isdigit.c\
-		ft_isalpha.c
+		ft_isalpha.c\
+		ft_printf.c\
+		get_next_line.c
 
 BONUS = ft_lstnew_bonus.c\
 		ft_lstadd_front_bonus.c\
@@ -61,11 +63,8 @@ $(NAME): $(OBJS)
 bonus: $(OBJS) $(OBJS_BONUS) 
 	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 
-
 .c.o:
-	$(CC) $(FLAGS) -c $< -o $@ -I.
-
-	
+	$(CC) $(FLAGS) -c $< -o $@ -I .
 
 so:
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
