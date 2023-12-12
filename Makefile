@@ -35,7 +35,9 @@ SRCS =	ft_substr.c\
 		ft_isascii.c\
 		ft_isalnum.c\
 		ft_isdigit.c\
-		ft_isalpha.c
+		ft_isalpha.c\
+		ft_printf.c\
+		get_next_line.c
 
 BONUS = ft_lstnew_bonus.c\
 		ft_lstadd_front_bonus.c\
@@ -55,20 +57,14 @@ FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): ft_printf get_next_line $(OBJS) 
+$(NAME): $(OBJS) 
 	ar rcs ${NAME} ${OBJS}
 
-bonus: ft_printf get_next_line $(OBJS) $(OBJS_BONUS) 
+bonus: $(OBJS) $(OBJS_BONUS) 
 	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 
-ft_printf:
-	make -C ./ft_printf
-
-get_next_line:
-	make -C ./get_next_line
-
 .c.o:
-	$(CC) $(FLAGS) -c $< -o $@ -I . -I ./ft_printf -I ./get_next_line
+	$(CC) $(FLAGS) -c $< -o $@ -I .
 
 so:
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
@@ -76,13 +72,9 @@ so:
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
-	make -C get_next_line clean
-	make -C ft_printf clean
 
 fclean: clean
 	rm -f $(NAME)
-	make -C get_next_line fclean
-	make -C ft_printf fclean
 
 re: fclean all
 

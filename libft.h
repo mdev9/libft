@@ -6,7 +6,7 @@
 /*   By: marde-vr <marde-vr@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 21:17:32 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/03 22:11:21 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/12/12 13:36:40 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,32 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//PRINTF
+# include <stdarg.h>
+
+int	ft_putchar(const char c);
+int	ft_putstr(const char *s);
+int	ft_putptr(long unsigned int ptr);
+int	ft_putnbr(long nbr);
+int	ft_puthexa(unsigned int nbr, char c);
+int	ft_puthexa_ptr(long unsigned int ptr);
+
+int	ft_printf(const char *s, ...);
+int	ft_print_arg(va_list args_lst, char c);
+
+//GET_NEXT_LINE
+
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+char			*get_next_line(int fd);
+void			*ft_gnl_memcpy(void *dest, const void *src, unsigned int n);
+unsigned int	ft_gnl_strlen(const char *s);
+char			*ft_gnl_strjoin(char *s1, char *s2);
+char			*ft_gnl_strdup(const char *src);
 
 #endif

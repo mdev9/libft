@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marde-vr <marde-vr@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 20:51:52 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/09 15:35:22 by marde-vr         ###   ########.fr       */
+/*   Updated: 2023/12/12 13:39:05 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putchar(char c)
 {
