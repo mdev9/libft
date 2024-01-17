@@ -37,7 +37,9 @@ SRCS =	ft_substr.c\
 		ft_isdigit.c\
 		ft_isalpha.c\
 		ft_printf.c\
-		get_next_line.c
+		ft_printf_utils.c\
+		get_next_line.c\
+		get_next_line_utils.c
 
 BONUS = ft_lstnew_bonus.c\
 		ft_lstadd_front_bonus.c\
