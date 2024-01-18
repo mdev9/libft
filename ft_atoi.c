@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marde-vr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marde-vr <marde-vr@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:31:40 by marde-vr          #+#    #+#             */
-/*   Updated: 2023/11/05 01:36:29 by marde-vr         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:06:58 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *nptr)
+long long	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	count;
+	int			i;
+	long long	sign;
+	long long	count;
 
 	i = 0;
 	sign = 1;
@@ -33,5 +33,5 @@ int	ft_atoi(const char *nptr)
 		count += (nptr[i] - 48);
 		i++;
 	}
-	return (count * sign);
+	return ((long long)(count * sign));
 }
