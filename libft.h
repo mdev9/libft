@@ -6,7 +6,7 @@
 /*   By: marde-vr <marde-vr@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 21:17:32 by marde-vr          #+#    #+#             */
-/*   Updated: 2024/01/18 18:06:15 by marde-vr         ###   ########.fr       */
+/*   Updated: 2024/01/29 10:30:11 by marde-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,7 @@ unsigned int		ft_gnl_strlen(const char *s);
 char				*ft_gnl_strjoin(char *s1, char *s2);
 char				*ft_gnl_strdup(const char *src);
 
+//CUSTOM FUNCTIONS
+
+int					ft_abs(int x);
 #endif
